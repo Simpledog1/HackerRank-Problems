@@ -1,12 +1,15 @@
-number_count = {}
+word_count = {}
 N = int(input())
 
 for i in range(N):
+    word = input()
 
-    number = int(input())
-    if number in number_count:
-        number_count[number] += 1
+    if word in word_count:
+        word_count[word] += 1
     else:
-        number_count[number] = 1
+        word_count[word] = 1
 
-print(number_count)
+print(len(word_count))
+
+for word, count in word_count.items():
+    print(count, end=" ")
